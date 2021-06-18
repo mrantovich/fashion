@@ -337,10 +337,31 @@ a {
   z-index: -1;
 }
 
+.hero__bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
 .hero__bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .hero__bg::after {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .hero__box {
@@ -416,6 +437,12 @@ a {
 
 .category {
   padding: 120px 0 50px 0;
+}
+
+@media (max-width: 768px) {
+  .category {
+    padding: 50px 0;
+  }
 }
 
 .category__box {
@@ -885,11 +912,32 @@ a {
   z-index: -1;
 }
 
+.tachen__bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  z-index: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
 .tachen__bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top right;
+}
+
+@media (max-width: 768px) {
+  .tachen__bg::after {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .tachen__box {
@@ -929,8 +977,20 @@ a {
   line-height: 146.66667%;
 }
 
+@media (max-width: 768px) {
+  .footer {
+    padding-top: 50px;
+  }
+}
+
 .footer__top {
   padding-bottom: 110px;
+}
+
+@media (max-width: 768px) {
+  .footer__top {
+    padding-bottom: 50px;
+  }
 }
 
 .footer__box {
